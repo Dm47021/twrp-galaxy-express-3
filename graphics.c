@@ -47,7 +47,7 @@
 typedef struct {
     int type;
     GGLSurface texture;
-    unsigned offset[97];
+    unsigned offset;
     unsigned cheight;
     unsigned ascent;
 } GRFont;
