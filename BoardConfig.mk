@@ -1,14 +1,14 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/j2lte/BoardConfigVendor.mk
+-include vendor/samsung/j1xlteatt/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := j2lte
-
+TARGET_BOOTLOADER_BOARD_NAME := j1xlteatt
+db 
 # Platform
 
-TARGET_BOARD_PLATFORM := exynos7420
+TARGET_BOARD_PLATFORM := exynos3
 TARGET_BOARD_PLATFORM_GPU := mali-t760mp8
 
 # Flags
@@ -17,17 +17,17 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60  
 
 # Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH := exynos3475
+TARGET_ARCH_VARIANT := armeabi-v7a-armeabi
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset  0x01000000 --dt device/samsung/j2lte/dtb --tags_offset 0x0000100
+=j==BOARD_MKBOOTIMG_ARGS := --ramdisk_offset  0x01000000 --dt device/samsung/j2lte/dtb --tags_offset 0x0000100
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x360000000
@@ -37,10 +37,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x130000000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-TARGET_RECOVERY_INITRC := device/samsung/j2lte/init.rc
+TARGET_RECOVERY_INITRC := device/samsung/j1xteatt/init.rc
 
 # Kernel Configs
-#TARGET_KERNEL_SOURCE := kernel/samsung/j2lte
+#TARGET_KERNEL_SOURCE := kernel/samsung/j1xlteatt
 #TARGET_KERNEL_CONFIG := twrp_defconfig
 #BOARD_KERNEL_IMAGE_NAME := Image
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := true
