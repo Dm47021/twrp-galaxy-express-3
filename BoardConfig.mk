@@ -1,14 +1,14 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/j2lte/BoardConfigVendor.mk
+-include vendor/samsung/j1xlteatt/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := j2lte
+TARGET_BOOTLOADER_BOARD_NAME := j1xlteatt
 
 # Platform
 
-TARGET_BOARD_PLATFORM := exynos7420
+TARGET_BOARD_PLATFORM := exynos3
 TARGET_BOARD_PLATFORM_GPU := mali-t760mp8
 
 # Flags
@@ -27,7 +27,7 @@ TARGET_CPU_SMP := true
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset  0x01000000 --dt device/samsung/j2lte/dtb --tags_offset 0x0000100
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset  0x01000000 --dt device/samsung/j1xlteatt/dtb --tags_offset 0x0000100
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x360000000
@@ -37,14 +37,14 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x130000000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-TARGET_RECOVERY_INITRC := device/samsung/j2lte/init.rc
+TARGET_RECOVERY_INITRC := device/samsung/j1xlteatt/init.rc
 
 # Kernel Configs
-#TARGET_KERNEL_SOURCE := kernel/samsung/j2lte
+#TARGET_KERNEL_SOURCE := kernel/samsung/j1xlteatt
 #TARGET_KERNEL_CONFIG := twrp_defconfig
 #BOARD_KERNEL_IMAGE_NAME := Image
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := true
-#ARM_EABI_TOOLCHAIN := /builds/omni-5.1/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+#ARM_EABI_TOOLCHAIN := /builds/omni-6.0/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 #KERNEL_TOOLCHAIN_PREFIX := 
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
@@ -52,7 +52,7 @@ TARGET_KERNEL_HEADER_ARCH := arm
 #TARGET_KERNEL_VARIANT_CONFIG :=
 #VARIANT_CONFIG :=
 #TIMA_DEFCONFIG :=
-TARGET_PREBUILT_KERNEL := device/samsung/j2lte/kernAl
+TARGET_PREBUILT_KERNEL := device/samsung/j1xlteatt/kernAl
 
 #BOARD_NEEDS_LZMA_MINIGZIP := true
 
